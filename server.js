@@ -20,7 +20,7 @@ connectDB()
 // var cors = require('cors');
 
 const app = express();
-
+export default app
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -35,5 +35,4 @@ app.use(notFound)
 app.use(errorHandler)
 const port = process.env.PORT || 5000
 app.listen(port , console.log("server is runing on port ",{port}))
-
 
